@@ -10,3 +10,8 @@ ssh -i ~/.ssh/otus-gcp -A appuser@35.228.143.158 -t ssh 10.166.0.3
 
 bastion_IP = 35.228.143.158
 someinternalhost_IP = 10.166.0.2
+
+## Задание 6
+
+testapp_IP = 35.228.166.85
+testapp_port = 9292
