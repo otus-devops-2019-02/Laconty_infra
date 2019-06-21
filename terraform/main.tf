@@ -13,28 +13,27 @@ provider "google" {
 
   # region = "europe-west-1"
   region = "${var.region}"
-
 }
 
 module "app" {
-  source = "modules/app"
+  source          = "modules/app"
   public_key_path = "${var.public_key_path}"
-  zone = "${var.zone}"
-  app_disk_image = "${var.app_disk_image}"
+  zone            = "${var.zone}"
+  app_disk_image  = "${var.app_disk_image}"
 }
 
 module "db" {
-  source = "modules/db"
+  source          = "modules/db"
   public_key_path = "${var.public_key_path}"
-  zone = "${var.zone}"
-  db_disk_image = "${var.db_disk_image}"
+  zone            = "${var.zone}"
+  db_disk_image   = "${var.db_disk_image}"
 }
 
 module "vpc" {
   source = "modules/vpc"
+
   # source_ranges = ["80.250.215.124/32"]
 }
-
 
 # resource "google_compute_instance" "app" {
 #   name         = "reddit-app"
@@ -79,6 +78,7 @@ module "vpc" {
 #   }
 # }
 
+
 # resource "google_compute_firewall" "firewall_puma" {
 #   name = "allow-puma-default"
 #
@@ -105,6 +105,8 @@ module "vpc" {
 #   source_ranges = ["0.0.0.0/0"]
 # }
 
+
 # resource "google_compute_address" "app_ip" {
 #   name = "reddit-app-ip"
 # }
+

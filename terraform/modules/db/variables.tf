@@ -4,13 +4,14 @@ variable public_key_path {
 
 variable zone {
   description = "Zone"
-  default = "europe-west1-b"
+  default     = "europe-west1-b"
 }
 
 variable db_disk_image {
   description = "Disk image for reddit db"
-  default = "reddit-db-base"
+  default     = "reddit-db-base"
 }
+
 #
 # variable project {
 #   description = "Project ID"
@@ -29,3 +30,4 @@ variable db_disk_image {
 # variable disk_image {
 #   description = "Disk image"
 # }
+
