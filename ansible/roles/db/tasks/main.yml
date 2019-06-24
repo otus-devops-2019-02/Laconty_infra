@@ -1,0 +1,7 @@
+---
+- name: Change mongo config file
+  template:
+    src: mongod.conf.j2 # path on local file-template
+    dest: /etc/mongod.conf # path on remote hosts
+    mode: 0644
+  notify: restart mongod
